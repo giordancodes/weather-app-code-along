@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Canadian Weather</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+
+<style>
+  *, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+	body{
+		background: #150811;
+		font-family: 'Open Sans', sans-serif;
+	}
+	a{
+		text-decoration: none;
+		color: #26081C;
+	}
+  .weather_widget{
+    width: 400px;
+    height: 320px;
+    background: #EFEFEF;
+    padding: 15px;
+    box-shadow: 5px 5px 5px #01BAEF;
+		margin: 0 auto;
+		border-radius: 5%;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: space-around;
+  }
+	.iconSummary{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	
+	.city_name{
+		font-size: 1.4rem;
+		margin: 0;
+	}
+	
+	img{
+		padding-right: 1rem;
+	}
+	
+	h1{
+		font-size: 3.9rem;
+		color: #01BAEF;
+		text-shadow: 2px 4px 3px rgba(255,255,255,0.1);
+		text-align: center;
+		padding-bottom: 3rem;
+	}
+	form input{
+		width: 100%;
+		font-size: 1rem;
+	}
+
+</style>
+<body>
+
+<h1>Canadian Weather</h1>
+
+  <div class="weather_widget">
+    <p class="city_name">{ City Name }</p>
+    <div class="iconSummary">
+    	<img src="" alt="weather icon" class="weather_image">
+    	<span class="weather_string">{ Weather Text }</span>
+    </div>
+    <p class="temp"> <span class="temp_c">##</span>&#176;C</p>
+    <p class="wind">Winds: <span class="windKph"></span>kph blowing <span class='windDir'></span></p>
+    <p class="date_time">{ Date and Time }</p>
+		<form class='searchForm'>
+			<input type="search" placeholder="Enter Canadian city..." name="" id="searchInput">
+		</form>
+  </div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script src="weather-app.js"></script>
+
+</body>
+</html>
